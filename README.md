@@ -28,3 +28,10 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
+## Building my App
+
+1. Started with a basic home page app which showed just the icons and didnt actuallt change the default Home App Launcher.
+2. made aesthetic changes.
+3. Liked how a terminal theme on a phone might look pretty cool so started iterating towards that.
+4. Used the nightowl theme from VS Code.
+5. Thousands of tweaks and then here we are!
