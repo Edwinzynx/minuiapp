@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TerminalDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:textColorPrimary">@color/terminal_text</item>
+        <item name="android:textColorSecondary">@color/terminal_comment</item>
+        <item name="colorAccent">@color/terminal_function</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.8</item>
+    </style>
+</resources>

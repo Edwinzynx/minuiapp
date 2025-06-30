@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night Owl Theme Colors -->
+    <color name="terminal_background">#000000</color>
+    <color name="terminal_card_bg">#0B1426</color>
+    <color name="terminal_text">#D6DEEB</color>
+    <color name="terminal_comment">#637777</color>
+    <color name="terminal_keyword">#C792EA</color>
+    <color name="terminal_string">#ECC48D</color>
+    <color name="terminal_number">#F78C6C</color>
+    <color name="terminal_function">#82AAFF</color>
+    <color name="terminal_variable">#ADDB67</color>
+    <color name="terminal_error">#EF5350</color>
+    
+    <!-- Legacy Colors -->
+    <color name="primary_color">#FFFFFF</color>
+    <color name="primary_dark_color">#000000</color>
+    <color name="secondary_color">#333333</color>
+    <color name="secondary_dark_color">#111111</color>
+    <color name="background_black">#000000</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_gray">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
