@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="background_black">#000000</color>
+    <color name="black">#000000</color>
+    <color name="primary_color">#1A1E24</color>
+    <color name="primary_dark_color">#000000</color>
+    <color name="secondary_color">#CCCCCC</color>
+    <color name="secondary_dark_color">#EFEFEF</color>
+    <color name="switch_track_unchecked">#D1D1D6</color>
+    <color name="terminal_background">#FFFFFF</color>
+    <color name="terminal_card_bg">#F5F2EB</color>
+    <color name="terminal_comment">#788B8B</color>
+    <color name="terminal_error">#C62828</color>
+    <color name="terminal_function">#0066CC</color>
+    <color name="terminal_keyword">#7E57C2</color>
+    <color name="terminal_number">#E65100</color>
+    <color name="terminal_string">#B58900</color>
+    <color name="terminal_text">#1A1E24</color>
+    <color name="terminal_variable">#2E7D32</color>
+    <color name="text_gray">#CCCCCC</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">Void UI</string>
+    <string name="device_admin_description">Minimalist Launcher Device Admin</string>
+    <string name="device_admin_explanation">Enable device admin to access advanced launcher features like screen lock and device management.</string>
+    <style name="TerminalDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@color/terminal_card_bg</item>
+        <item name="android:textColor">@color/terminal_text</item>
+        <item name="android:textColorPrimary">@color/terminal_text</item>
+        <item name="android:textColorSecondary">@color/terminal_comment</item>
+        <item name="colorAccent">@color/terminal_function</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.8</item>
+    </style>
+    <style name="Theme.VoidUI" parent="Theme.AppCompat.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_dark_color</item>
+        <item name="colorOnPrimary">@color/black</item>
+        
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorSecondaryVariant">@color/secondary_dark_color</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">@color/terminal_background</item>
+        <item name="android:navigationBarColor" ns1:targetApi="l">@color/terminal_background</item>
+        
+        <item name="android:windowBackground">@color/terminal_background</item>
+        
+        <item name="android:windowContentOverlay">@null</item>
+        
+        <item name="android:windowSplashScreenIconBackgroundColor" ns1:targetApi="s">@color/black</item>
+    </style>
+</resources>

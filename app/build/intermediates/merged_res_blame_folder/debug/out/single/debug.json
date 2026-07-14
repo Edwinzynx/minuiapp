@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-merged_res-32:\\layout_item_home_app.xml.flat",
+        "source": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-main-34:\\layout\\item_home_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-merged_res-32:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-main-34:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "tred.voidui.app-merged_res-32:/mipmap_ic_launcher.png.flat",
+        "source": "tred.voidui.app-main-34:/mipmap/ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-merged_res-32:\\color_switch_track_tint.xml.flat",
+        "source": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-main-34:\\color\\switch_track_tint.xml"
+    },
+    {
+        "merged": "tred.voidui.app-merged_res-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "tred.voidui.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-merged_res-32:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-main-34:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "tred.voidui.app-merged_res-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "tred.voidui.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-merged_res-32:\\xml_device_admin.xml.flat",
+        "source": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-main-34:\\xml\\device_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-merged_res-32:\\drawable_ic_void_logo.png.flat",
+        "source": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-main-34:\\drawable\\ic_void_logo.png"
+    },
+    {
+        "merged": "tred.voidui.app-merged_res-32:/mipmap_ic_launcher_round.png.flat",
+        "source": "tred.voidui.app-main-34:/mipmap/ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-merged_res-32:\\layout_item_all_apps.xml.flat",
+        "source": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-main-34:\\layout\\item_all_apps.xml"
+    },
+    {
+        "merged": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-merged_res-32:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\edwin\\.gradle\\daemon\\8.5\\tred.voidui.app-main-34:\\xml\\backup_rules.xml"
+    }
+]

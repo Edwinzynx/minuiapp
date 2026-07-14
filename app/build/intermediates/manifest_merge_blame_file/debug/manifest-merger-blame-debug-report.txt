@@ -1,0 +1,213 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="tred.voidui"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Launcher Permissions -->
+12    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+12-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:6:5-77
+12-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:6:22-74
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:7:5-67
+13-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:7:22-64
+14    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+14-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:8:5-72
+14-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:8:22-69
+15    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+15-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:9:5-78
+15-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:9:22-75
+16    <uses-permission android:name="android.permission.GET_TASKS" />
+16-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:10:5-68
+16-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:10:22-65
+17    <uses-permission android:name="android.permission.REORDER_TASKS" />
+17-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:11:5-72
+17-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:11:22-69
+18    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+18-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:12:5-78
+18-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:12:22-75
+19
+20    <permission
+20-->[androidx.core:core:1.13.1] C:\Users\edwin\.gradle\caches\transforms-3\8291f9e42bf39170fcccfcb444cbe3da\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+21        android:name="tred.voidui.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.13.1] C:\Users\edwin\.gradle\caches\transforms-3\8291f9e42bf39170fcccfcb444cbe3da\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.13.1] C:\Users\edwin\.gradle\caches\transforms-3\8291f9e42bf39170fcccfcb444cbe3da\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="tred.voidui.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.13.1] C:\Users\edwin\.gradle\caches\transforms-3\8291f9e42bf39170fcccfcb444cbe3da\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.13.1] C:\Users\edwin\.gradle\caches\transforms-3\8291f9e42bf39170fcccfcb444cbe3da\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:14:5-65:19
+27        android:allowBackup="true"
+27-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:15:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.13.1] C:\Users\edwin\.gradle\caches\transforms-3\8291f9e42bf39170fcccfcb444cbe3da\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+29        android:dataExtractionRules="@xml/data_extraction_rules"
+29-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:16:9-65
+30        android:debuggable="true"
+31        android:extractNativeLibs="false"
+32        android:fullBackupContent="@xml/backup_rules"
+32-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:17:9-54
+33        android:icon="@mipmap/ic_launcher"
+33-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:18:9-43
+34        android:label="@string/app_name"
+34-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:20:9-41
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:19:9-54
+36        android:supportsRtl="true"
+36-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:21:9-35
+37        android:theme="@style/Theme.VoidUI" >
+37-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:22:9-44
+38
+39        <!-- Main Launcher Activity - This makes it a true system launcher -->
+40        <activity
+40-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:26:9-48:20
+41            android:name="tred.voidui.MainActivity"
+41-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:27:13-41
+42            android:clearTaskOnLaunch="true"
+42-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:31:13-45
+43            android:exported="true"
+43-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:28:13-36
+44            android:launchMode="singleTask"
+44-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:29:13-44
+45            android:screenOrientation="portrait"
+45-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:33:13-49
+46            android:stateNotNeeded="true"
+46-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:30:13-42
+47            android:theme="@style/Theme.VoidUI" >
+47-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:32:13-48
+48
+49            <!-- Standard launcher intent filters -->
+50            <intent-filter android:priority="1000" >
+50-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:36:13-39:29
+50-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:36:28-51
+51                <action android:name="android.intent.action.MAIN" />
+51-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:37:17-69
+51-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:37:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:38:17-77
+53-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:38:27-74
+54            </intent-filter>
+55
+56            <!-- Home launcher intent filters - This is what makes it a system launcher -->
+57            <intent-filter android:priority="1000" >
+57-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:42:13-46:29
+57-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:42:28-51
+58                <action android:name="android.intent.action.MAIN" />
+58-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:37:17-69
+58-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:37:25-66
+59
+60                <category android:name="android.intent.category.HOME" />
+60-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:44:17-73
+60-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:44:27-70
+61                <category android:name="android.intent.category.DEFAULT" />
+61-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:45:17-76
+61-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:45:27-73
+62            </intent-filter>
+63        </activity>
+64
+65        <!-- Device Admin Receiver -->
+66        <receiver
+66-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:51:9-63:20
+67            android:name="tred.voidui.MyDeviceAdminReceiver"
+67-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:52:13-50
+68            android:exported="true"
+68-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:53:13-36
+69            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+69-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:54:13-70
+70            <meta-data
+70-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:55:13-57:56
+71                android:name="android.app.device_admin"
+71-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:56:17-56
+72                android:resource="@xml/device_admin" />
+72-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:57:17-53
+73
+74            <intent-filter>
+74-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:58:13-62:29
+75                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+75-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:59:17-82
+75-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:59:25-79
+76                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+76-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:60:17-83
+76-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:60:25-80
+77                <action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED" />
+77-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:61:17-92
+77-->C:\Users\edwin\OneDrive\Desktop\mini\app\src\main\AndroidManifest.xml:61:25-89
+78            </intent-filter>
+79        </receiver>
+80
+81        <provider
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\edwin\.gradle\caches\transforms-3\31a1d31a170c8c8344c6d320249dcf72\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+82            android:name="androidx.startup.InitializationProvider"
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\edwin\.gradle\caches\transforms-3\31a1d31a170c8c8344c6d320249dcf72\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+83            android:authorities="tred.voidui.androidx-startup"
+83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\edwin\.gradle\caches\transforms-3\31a1d31a170c8c8344c6d320249dcf72\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+84            android:exported="false" >
+84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\edwin\.gradle\caches\transforms-3\31a1d31a170c8c8344c6d320249dcf72\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+85            <meta-data
+85-->[androidx.emoji2:emoji2:1.2.0] C:\Users\edwin\.gradle\caches\transforms-3\31a1d31a170c8c8344c6d320249dcf72\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+86                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+86-->[androidx.emoji2:emoji2:1.2.0] C:\Users\edwin\.gradle\caches\transforms-3\31a1d31a170c8c8344c6d320249dcf72\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+87                android:value="androidx.startup" />
+87-->[androidx.emoji2:emoji2:1.2.0] C:\Users\edwin\.gradle\caches\transforms-3\31a1d31a170c8c8344c6d320249dcf72\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+88            <meta-data
+88-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\edwin\.gradle\caches\transforms-3\036cff8c16e260bbf148d569ceacf34e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+89-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\edwin\.gradle\caches\transforms-3\036cff8c16e260bbf148d569ceacf34e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+90                android:value="androidx.startup" />
+90-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\edwin\.gradle\caches\transforms-3\036cff8c16e260bbf148d569ceacf34e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+91            <meta-data
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+92                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+93                android:value="androidx.startup" />
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+94        </provider>
+95
+96        <receiver
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+97            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+98            android:directBootAware="false"
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+99            android:enabled="true"
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+100            android:exported="true"
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+101            android:permission="android.permission.DUMP" >
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+102            <intent-filter>
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+103                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+104            </intent-filter>
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+106                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+109                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+110            </intent-filter>
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+112                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\edwin\.gradle\caches\transforms-3\c6aeaf5d00d1b524a38540d7c42b3847\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+113            </intent-filter>
+114        </receiver>
+115    </application>
+116
+117</manifest>
