@@ -1,6 +1,7 @@
 # Void UI 🌌
 
-Void UI is a premium, minimal, terminal-style home launcher for Android. Inspired by terminal CLI layouts and the popular **Night Owl** theme, Void UI replaces the standard Android home screen with a clean, text-based dashboard that keeps you productive and distraction-free.
+Void UI is a premium, minimal, terminal-style home launcher for Android. Void UI replaces the standard Android home screen with a clean, text-based dashboard that keeps you productive and distraction-free. 
+Make sure to change your phone wallpaper to a dark/light colour first ;)
 
 ---
 
