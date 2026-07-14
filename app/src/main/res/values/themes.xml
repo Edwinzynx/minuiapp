@@ -16,5 +16,7 @@
         <item name="android:windowBackground">@color/terminal_background</item>
         <!-- Full screen flags -->
         <item name="android:windowContentOverlay">@null</item>
+        <!-- Splash Screen Icon Background (Android 12+) -->
+        <item name="android:windowSplashScreenIconBackgroundColor" tools:targetApi="s">@color/black</item>
     </style>
 </resources>
