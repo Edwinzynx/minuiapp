@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TerminalDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="android:windowBackground">@color/black</item>
+    <style name="TerminalDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@color/terminal_card_bg</item>
+        <item name="android:textColor">@color/terminal_text</item>
         <item name="android:textColorPrimary">@color/terminal_text</item>
         <item name="android:textColorSecondary">@color/terminal_comment</item>
         <item name="colorAccent">@color/terminal_function</item>

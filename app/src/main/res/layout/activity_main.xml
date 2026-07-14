@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/terminal_background"
+    android:fitsSystemWindows="true">
 
     <!-- Main Home Screen -->
     <LinearLayout
@@ -12,17 +14,46 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/black"
+        android:background="@color/terminal_background"
         android:padding="16dp">
+
+        <!-- Top Bar with Theme Toggle Switch -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ init theme"
+                android:textColor="@color/terminal_comment"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/themeToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:thumbTint="@android:color/white"
+                app:trackTint="@color/switch_track_tint" />
+
+        </RelativeLayout>
 
         <!-- Terminal Clock Widget -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/clockCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@color/terminal_card_bg"
             app:cardCornerRadius="8dp"
-            app:cardElevation="0dp">
+            app:cardElevation="0dp"
+            android:foreground="?android:attr/selectableItemBackground">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="monospace"
-                    android:text="20:26:45"
+                    android:text="00:00:00"
                     android:textColor="@color/terminal_string"
                     android:textSize="24sp" />
 
@@ -62,182 +93,32 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Screen Time Widget with Tabs -->
-        <androidx.cardview.widget.CardView
+        <!-- Horizontal Container for Screen Time & Battery Info -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="170dp"
+            android:orientation="horizontal"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@color/terminal_card_bg"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp">
+            android:baselineAligned="false">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="$ screen --time"
-                        android:textColor="@color/terminal_comment"
-                        android:textSize="12sp"
-                        android:fontFamily="monospace" />
-
-                    <TextView
-                        android:id="@+id/permissionStatus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="[grant]"
-                        android:textColor="@color/terminal_error"
-                        android:textSize="10sp"
-                        android:fontFamily="monospace"
-                        android:padding="4dp"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:visibility="gone" />
-
-                </LinearLayout>
-
-                <!-- Tab Headers -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/todayTab"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="[today]"
-                        android:textColor="@color/terminal_function"
-                        android:textSize="12sp"
-                        android:fontFamily="monospace"
-                        android:padding="4dp"
-                        android:gravity="center"
-                        android:background="?android:attr/selectableItemBackground" />
-
-                    <TextView
-                        android:id="@+id/weekTab"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="[week]"
-                        android:textColor="@color/terminal_comment"
-                        android:textSize="12sp"
-                        android:fontFamily="monospace"
-                        android:padding="4dp"
-                        android:gravity="center"
-                        android:background="?android:attr/selectableItemBackground" />
-
-                </LinearLayout>
-
-                <!-- Screen Time Content -->
-                <LinearLayout
-                    android:id="@+id/screenTimeContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/screenTimeText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="monospace"
-                        android:text="2h 34m today"
-                        android:textColor="@color/terminal_number"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/screenTimeDetails"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="monospace"
-                        android:text="avg: 3h 12m"
-                        android:textColor="@color/terminal_comment"
-                        android:textSize="12sp"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:id="@+id/lastUpdated"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="monospace"
-                        android:text="updated: now"
-                        android:textColor="@color/terminal_comment"
-                        android:textSize="10sp"
-                        android:alpha="0.7" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- Screen Time Goals Widget -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@color/terminal_card_bg"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+            <!-- Merged Screen Time Widget -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/screenTimeCard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:minHeight="160dp"
+                app:cardBackgroundColor="@color/terminal_card_bg"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="$ screen --limits"
-                        android:textColor="@color/terminal_comment"
-                        android:textSize="12sp"
-                        android:fontFamily="monospace" />
-
-                    <TextView
-                        android:id="@+id/setGoals"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="[set]"
-                        android:textColor="@color/terminal_function"
-                        android:textSize="12sp"
-                        android:fontFamily="monospace"
-                        android:padding="4dp"
-                        android:background="?android:attr/selectableItemBackground" />
-
-                </LinearLayout>
-
-                <!-- Goals Content -->
-                <LinearLayout
-                    android:id="@+id/goalsContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="vertical">
-
-                    <!-- Daily Goal -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -245,90 +126,215 @@
                         android:gravity="center_vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="daily:"
-                            android:textColor="@color/terminal_variable"
-                            android:textSize="14sp"
-                            android:fontFamily="monospace"
-                            android:layout_marginEnd="8dp" />
-
-                        <TextView
-                            android:id="@+id/dailyGoalText"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="4h 0m"
-                            android:textColor="@color/terminal_string"
-                            android:textSize="14sp"
-                            android:fontFamily="monospace" />
-
-                        <TextView
-                            android:id="@+id/dailyProgress"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="[58%]"
-                            android:textColor="@color/terminal_number"
+                            android:text="$ screen"
+                            android:textColor="@color/terminal_comment"
                             android:textSize="12sp"
                             android:fontFamily="monospace" />
 
+                        <TextView
+                            android:id="@+id/setGoals"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[set]"
+                            android:textColor="@color/terminal_function"
+                            android:textSize="12sp"
+                            android:fontFamily="monospace"
+                            android:padding="4dp"
+                            android:background="?android:attr/selectableItemBackground" />
+
+                        <TextView
+                            android:id="@+id/permissionStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="[grant]"
+                            android:textColor="@color/terminal_error"
+                            android:textSize="10sp"
+                            android:fontFamily="monospace"
+                            android:padding="4dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:visibility="gone" />
+
                     </LinearLayout>
 
-                    <!-- Weekly Goal -->
+                    <!-- Tab Headers -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="weekly:"
-                            android:textColor="@color/terminal_variable"
-                            android:textSize="14sp"
-                            android:fontFamily="monospace"
-                            android:layout_marginEnd="8dp" />
-
-                        <TextView
-                            android:id="@+id/weeklyGoalText"
+                            android:id="@+id/todayTab"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="25h 0m"
-                            android:textColor="@color/terminal_string"
-                            android:textSize="14sp"
-                            android:fontFamily="monospace" />
+                            android:text="[today]"
+                            android:textColor="@color/terminal_function"
+                            android:textSize="11sp"
+                            android:fontFamily="monospace"
+                            android:padding="2dp"
+                            android:gravity="center"
+                            android:background="?android:attr/selectableItemBackground" />
 
                         <TextView
-                            android:id="@+id/weeklyProgress"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/weekTab"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="[42%]"
-                            android:textColor="@color/terminal_number"
-                            android:textSize="12sp"
-                            android:fontFamily="monospace" />
+                            android:layout_weight="1"
+                            android:text="[week]"
+                            android:textColor="@color/terminal_comment"
+                            android:textSize="11sp"
+                            android:fontFamily="monospace"
+                            android:padding="2dp"
+                            android:gravity="center"
+                            android:background="?android:attr/selectableItemBackground" />
 
                     </LinearLayout>
 
-                    <!-- Status Message -->
-                    <TextView
-                        android:id="@+id/goalStatus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="on track for today"
-                        android:textColor="@color/terminal_comment"
-                        android:textSize="10sp"
-                        android:fontFamily="monospace"
-                        android:alpha="0.8" />
+                    <!-- Screen Time Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/screenTimeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="0h 0m today"
+                            android:textColor="@color/terminal_number"
+                            android:textSize="15sp" />
+
+                        <!-- Merged Limit Goal and Progress % -->
+                        <TextView
+                            android:id="@+id/screenTimeGoalLimitText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="monospace"
+                            android:text="limit: 4h 0m [0%]"
+                            android:textColor="@color/terminal_string"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/goalStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="monospace"
+                            android:text="on track"
+                            android:textColor="@color/terminal_comment"
+                            android:textSize="10sp"
+                            android:alpha="0.8" />
+
+                        <TextView
+                            android:id="@+id/screenTimeDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="avg: 0h 0m"
+                            android:textColor="@color/terminal_comment"
+                            android:textSize="10sp"
+                            android:visibility="gone" />
+
+                        <!-- Align updated time at the very bottom -->
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/lastUpdated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="updated: now"
+                            android:textColor="@color/terminal_comment"
+                            android:textSize="9sp"
+                            android:alpha="0.6" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
+            <!-- Battery Information Widget -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/batteryCard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:minHeight="160dp"
+                app:cardBackgroundColor="@color/terminal_card_bg"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ battery"
+                        android:textColor="@color/terminal_comment"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/batteryLevelText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="--% (status)"
+                            android:textColor="@color/terminal_variable"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/batteryTempText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="monospace"
+                            android:text="temp: --°C"
+                            android:textColor="@color/terminal_comment"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/batteryHealthText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="monospace"
+                            android:text="health: --"
+                            android:textColor="@color/terminal_comment"
+                            android:textSize="10sp"
+                            android:alpha="0.8" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
         <!-- Home Apps Section -->
         <androidx.cardview.widget.CardView
@@ -391,7 +397,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="← swipe left for app drawer (or long press)"
+            android:text="← swipe left for apps | swipe right for camera →"
             android:textColor="@color/terminal_comment"
             android:textSize="10sp"
             android:fontFamily="monospace"
@@ -405,7 +411,7 @@
         android:id="@+id/appDrawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="@color/terminal_background"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
         app:behavior_hideable="true"
         app:behavior_peekHeight="0dp">
@@ -414,7 +420,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/black"
+            android:background="@color/terminal_background"
             android:padding="16dp">
 
             <!-- App Drawer Header -->
