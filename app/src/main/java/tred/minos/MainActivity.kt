@@ -941,6 +941,7 @@ class MainActivity : AppCompatActivity() {
         checkUsageStatsPermission()
         updateScreenTime()
         updateGoals()
+        loadApps() // Reload apps dynamically to capture new installs/uninstalls
     }
     
     override fun onPause() {
