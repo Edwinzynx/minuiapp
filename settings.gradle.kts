@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MinimalistLauncherApp"
+rootProject.name = "Void UI"
 include(":app")
