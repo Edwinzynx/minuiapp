@@ -1,37 +1,51 @@
-# Minimalist Launcher App
+# Void UI 🌌
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Void UI is a premium, minimal, terminal-style home launcher for Android. Inspired by terminal CLI layouts and the popular **Night Owl** theme, Void UI replaces the standard Android home screen with a clean, text-based dashboard that keeps you productive and distraction-free.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/edwinraphael01-2299s-projects/v0-minimalist-launcher-app)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/rOQ97BhIQHl)
+---
 
-## Overview
+## 🎨 Premium Design & Theme
+- **Dual Themes**: Dynamic dark/light mode toggle via a slider in the top right.
+  - **AMOLED Night Mode**: Pitch-black background with neon green/gold terminal outputs to save battery.
+  - **Day Theme**: A soft, high-contrast light cream background with deep charcoal text.
+- **Transparent Status & Nav Bars**: Full-screen layout that draws seamlessly under and around your device's camera cutout, with adaptive status bar icons (dark in light theme, light in dark theme).
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+---
 
-## Deployment
+## 🚀 Key Features
 
-Your project is live at:
+### 1. Dynamic Widgets (CLI Themed)
+* **`$ date`**: Shows system date and time. Tapping this widget opens your phone's default **Clock app**.
+* **`$ battery`**: Displays precise battery level, charging status, temperature, and health indicators.
+* **`$ screen`**: Computes and displays your screen time (hours and minutes) alongside a limit bar indicator. Tapping this widget opens your system's **Digital Wellbeing app**.
+* **`$ ls ~/apps`**: A list of your custom home screen shortcut apps. Tapping `[edit]` allows you to configure which apps are visible.
 
-**[https://vercel.com/edwinraphael01-2299s-projects/v0-minimalist-launcher-app](https://vercel.com/edwinraphael01-2299s-projects/v0-minimalist-launcher-app)**
+### 2. Full-Screen Swipe Gestures
+You can swipe anywhere on the screen (including on top of widgets and lists) to trigger actions:
+* **Swipe Left** 👈: Opens the app drawer bottom sheet (`$ find /system/apps -type f`).
+* **Swipe Right** 👉: Instantly launches the device **Camera app** (with robust intent package fallbacks).
 
-## Build your app
+### 3. High-Accuracy Screen Time Tracker
+Unlike rolling calculations, Void UI implements custom **UsageEvents log parsing** at the OS layer. It calculates the exact elapsed time between application foreground (`ACTIVITY_RESUMED`) and background (`ACTIVITY_PAUSED`) transitions since midnight to match system wellbeing settings.
 
-Continue building your app on:
+### 4. Interactive Default Launcher Setup Dialogs
+On first launch, Void UI shows a clean terminal-styled prompt offering two modes:
+- **Inspect App**: Dismisses the prompt so you can explore the launcher workspace.
+- **Set as Default**: Displays a step-by-step guidance dialog (`$ steps --set_default`) and redirects you directly to the Android **Default Home App Settings** selection menu when you tap **Proceed**.
 
-**[https://v0.dev/chat/projects/rOQ97BhIQHl](https://v0.dev/chat/projects/rOQ97BhIQHl)**
+---
 
-## How It Works
+## 📥 Installation
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
-## Building my App
+You can download and install the latest build directly from the repository:
+1. Download [VoidUI.apk](VoidUI.apk) from the root folder of this repository.
+2. Install the APK on your Android device (ensure "Install from unknown sources" is enabled in settings).
+3. Open the app and follow the setup instructions to set Void UI as your default launcher.
 
-1. Started with a basic home page app which showed just the icons and didnt actuallt change the default Home App Launcher.
-2. made aesthetic changes.
-3. Liked how a terminal theme on a phone might look pretty cool so started iterating towards that.
-4. Used the nightowl theme from VS Code.
-5. Thousands of tweaks and then here we are!
+---
+
+## 🛠️ Technical Stack
+* **Language**: Kotlin
+* **SDK Version**: targetSdk 34, minSdk 24 (Android 7.0+)
+* **Dependencies**: AndroidX, Material Components, CoordinatorLayout, ConstraintLayout, Recyclerview, CardView
+* **Architecture**: Clean, lifecycle-aware event handling, SharedPreferences flags for onboarding, and customized theme style overlays.
