@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "tred.minos"
+    namespace = "tred.voidui"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "tred.minos"
+        applicationId = "tred.voidui"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

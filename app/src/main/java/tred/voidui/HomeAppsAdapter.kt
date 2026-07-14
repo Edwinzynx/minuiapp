@@ -1,4 +1,4 @@
-package tred.minos
+package tred.voidui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AllAppsAdapter(
+class HomeAppsAdapter(
     private val apps: List<AppInfo>,
     private val onAppClick: (AppInfo) -> Unit
-) : RecyclerView.Adapter<AllAppsAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<HomeAppsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val appIcon: ImageView = view.findViewById(R.id.appIcon)
@@ -20,7 +20,7 @@ class AllAppsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_all_apps, parent, false)
+            .inflate(R.layout.item_home_app, parent, false)
         return ViewHolder(view)
     }
 
@@ -46,17 +46,12 @@ class AllAppsAdapter(
             app.packageName.contains("clock") -> "time"
             app.packageName.contains("weather") -> "weather"
             app.packageName.contains("maps") -> "nav"
-            app.packageName.contains("whatsapp") -> "chat"
-            app.packageName.contains("instagram") -> "social"
-            app.packageName.contains("spotify") -> "music"
-            app.packageName.contains("youtube") -> "video"
-            app.packageName.contains("gmail") -> "mail"
             else -> {
                 // Extract the last part of package name and clean it up
                 val parts = app.packageName.split(".")
                 val lastPart = parts.lastOrNull() ?: app.packageName
                 when {
-                    lastPart.length > 10 -> lastPart.take(10)
+                    lastPart.length > 8 -> lastPart.take(8)
                     else -> lastPart
                 }
             }

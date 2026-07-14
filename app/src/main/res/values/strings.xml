@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MinimalistLauncherApp</string>
+    <string name="app_name">Void UI</string>
     <string name="device_admin_description">Minimalist Launcher Device Admin</string>
     <string name="device_admin_explanation">Enable device admin to access advanced launcher features like screen lock and device management.</string>
 </resources>

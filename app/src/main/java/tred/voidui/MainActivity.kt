@@ -1,4 +1,4 @@
-package tred.minos
+package tred.voidui
 
 import android.app.AppOpsManager
 import android.app.admin.DevicePolicyManager
@@ -723,7 +723,7 @@ class MainActivity : AppCompatActivity() {
     private fun showDefaultLauncherDialog() {
         AlertDialog.Builder(this, R.style.TerminalDialogTheme)
             .setTitle("$ default_launcher")
-            .setMessage("Do you want to set MinimalistLauncher as your default home launcher? Or just inspect the app?")
+            .setMessage("Do you want to set Void UI as your default home launcher? Or just inspect the app?")
             .setPositiveButton("set as default") { _, _ ->
                 sharedPrefs.edit().putBoolean("has_prompted_default_launcher", true).apply()
                 showDefaultLauncherStepsDialog()
@@ -739,7 +739,7 @@ class MainActivity : AppCompatActivity() {
     private fun showDefaultLauncherStepsDialog() {
         AlertDialog.Builder(this, R.style.TerminalDialogTheme)
             .setTitle("$ steps --set_default")
-            .setMessage("1. Tap 'proceed' below.\n\n2. Choose 'MinimalistLauncherApp' (or 'minos') from the system prompt.\n\n3. Tap 'Always' or set it as default.\n\n(If the system prompt doesn't appear, you can set it via Settings -> Apps -> Default Apps -> Home app)")
+            .setMessage("1. Tap 'proceed' below.\n\n2. Choose 'Void UI' (or 'voidui') from the system prompt.\n\n3. Tap 'Always' or set it as default.\n\n(If the system prompt doesn't appear, you can set it via Settings -> Apps -> Default Apps -> Home app)")
             .setPositiveButton("proceed") { _, _ ->
                 promptSetAsDefaultLauncher()
             }

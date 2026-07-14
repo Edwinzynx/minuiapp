@@ -1,4 +1,4 @@
-package tred.minos
+package tred.voidui
 
 import android.app.admin.DeviceAdminReceiver
 import android.content.Context

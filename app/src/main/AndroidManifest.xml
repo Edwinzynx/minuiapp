@@ -17,7 +17,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MinimalistLauncherApp"
+        android:theme="@style/Theme.VoidUI"
         tools:targetApi="31">
         
         <!-- Main Launcher Activity - This makes it a true system launcher -->
@@ -27,7 +27,7 @@
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:clearTaskOnLaunch="true"
-            android:theme="@style/Theme.MinimalistLauncherApp"
+            android:theme="@style/Theme.VoidUI"
             android:screenOrientation="portrait">
             
             <!-- Standard launcher intent filters -->

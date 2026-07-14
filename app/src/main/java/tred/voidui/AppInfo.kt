@@ -1,4 +1,4 @@
-package tred.minos
+package tred.voidui
 
 import android.graphics.drawable.Drawable
 
