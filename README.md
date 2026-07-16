@@ -5,11 +5,7 @@ Make sure to change your phone wallpaper to a dark/light colour first ;)
 
 ---
 
-## 🎨 Premium Design & Theme
-- **Dual Themes**: Dynamic dark/light mode toggle via a slider in the top right.
-  - **AMOLED Night Mode**: Pitch-black background with neon green/gold terminal outputs to save battery.
-  - **Day Theme**: A soft, high-contrast light cream background with deep charcoal text.
-- **Transparent Status & Nav Bars**: Full-screen layout that draws seamlessly under and around your device's camera cutout, with adaptive status bar icons (dark in light theme, light in dark theme).
+
 ## 📱 UI
 ### Here are some screenshots from the interface
 <table align="center">
