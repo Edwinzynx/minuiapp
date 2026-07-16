@@ -10,6 +10,35 @@ Make sure to change your phone wallpaper to a dark/light colour first ;)
   - **AMOLED Night Mode**: Pitch-black background with neon green/gold terminal outputs to save battery.
   - **Day Theme**: A soft, high-contrast light cream background with deep charcoal text.
 - **Transparent Status & Nav Bars**: Full-screen layout that draws seamlessly under and around your device's camera cutout, with adaptive status bar icons (dark in light theme, light in dark theme).
+## 📱 UI
+### Here are some screenshots from the interface
+<table align="center">
+  <tr>
+    <td align="center"><b>🌑 Dark Mode</b></td>
+    <td align="center"><b>☀️ Light Mode</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/cbbd9f5d-8453-4827-a36d-d79e74fde0c7" width="300" alt="Dark Mode"/>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/f11c7a94-cb74-40f1-85fe-b4a43dcb4036" width="300" alt="Light Mode"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>⚡ Select Quick Apps</b></td>
+    <td align="center"><b>📂 Open Apps</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/c866df21-da30-481a-86f3-418450103fa8" width="300" alt="Select Quick Apps"/>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/6124320f-d075-4288-b601-cc63fcc223a0" width="300" alt="Open Apps"/>
+    </td>
+  </tr>
+</table>
+
 
 ---
 
